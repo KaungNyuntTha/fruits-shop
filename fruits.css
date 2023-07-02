@@ -1,0 +1,316 @@
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: var(--main-color);
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'myfont';
+    src: url(./font/Juicy\ Fruit.ttf);
+}
+@font-face {
+    font-family: 'myfont1';
+    src: url(./font/Monomod.ttf);
+   }
+:root{
+    --main-color:#212020;
+    --second-color:#1bbf28;
+    --third-color:white;
+    --fourth-color:orange;
+}
+/* nav section start */
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: var(--second-color);
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo span{
+    font-size: 2rem;
+    font-weight: 50;
+    color: var(--third-color);
+    font-family: myfont;
+}
+nav a{
+    font-family: myfont1;
+    font-weight: bold;
+}
+.social-link i{
+    font-size: 30px;
+    margin: 0 10px;
+/* background: white; */
+    color: var(--third-color);
+}
+.logo img{
+    transition: 0.6s;
+}
+.logo img:hover{
+    transform: translateY(-20px);
+    transform: rotate(360deg);
+}
+.nav-link a{
+    background: var(--third-color);
+    font-size: 13px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+.nav-link a:hover{
+    background: var(--main-color);
+    color: var(--third-color);
+}
+#bars{
+    background: var(--third-color);
+    color: var(--second-color);
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* nav section end */
+/* banner section start */
+.banner{
+width: 100%;
+height: calc(100vh - 100px) ;
+background: url(./gallery/markus-spiske-s05XKB6jK2c-unsplash.jpg);
+background-size: cover;
+background-position: center;
+background-position: 50% 80%;
+padding: 200px 0 0 150px;
+}
+.banner-box {
+    width: 50%;
+    height: auto;
+    /* background: pink; */
+}
+.banner-box h2{
+    font-family: "myfont1";
+}
+.banner-box h1{
+    color: var(--main-color);
+    font-family: "myfont";
+    letter-spacing: 5px;
+    font-weight: bolder;
+    margin:10px 0 ;
+    font-size: 3rem;
+}
+.banner-box p{
+    color: var(--main-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.btn{
+    background: var(--second-color);
+    color: var(--third-color);
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    margin-top: 15px;
+    border-radius: 10px;
+    transition: .4s;
+}
+.btn:hover{
+    background: var(--main-color);
+    color: var(--third-color);
+    cursor: pointer;
+}
+/* banner section end */
+/* about us */
+.about-us, .shop{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--third-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-us_left, 
+.about-us_right{
+    flex: 1;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+.about-us_left{
+    padding-left: 100px;;
+}
+.about-us_text_gp h2{
+   font-size: 50px;
+   font-family: "myfont1";
+   font-weight: bolder;
+}
+.about-us_text_gp p{
+    font-size: 18px;
+    margin-top: 20px;
+}
+/* gallery start */
+#gallery{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--fourth-color);
+    padding: 30px;
+}
+#gallery h2{
+    text-align: center;
+    font-size: 3rem;
+    font-family: "myfont1";
+    margin-bottom: 30px;
+}
+#gallery p{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.gallery-photos{
+    display: flex;
+    flex-wrap: wrap;
+    /* gap= distance between 2 photos */
+    gap: 20px;
+}
+.gallery-photos img{
+    flex: 1 1 25rem;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 70%;
+}
+/* gallery end */
+/* services start */
+#services{
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    color: var(--third-color);
+}
+#services h2{
+    text-align: center;
+    font-size: 3rem;
+    font-family: "myfont1";
+    margin-bottom: 30px;
+}
+#services p{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.services-photos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.services-photos_card{
+    flex: 1 1 23rem;
+    height: 240px;
+    box-shadow: inset 0 0 3px 3px var(--main-color);
+    position: relative;
+    overflow: hidden;
+}
+.services-photo_card_img,
+.services-photo_card_text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.services-photo_card_img img{
+    width: 100%;
+    height: 100%;
+}
+.services-photo_card_text{
+    background: rgba(255, 0, 0, 0.453);
+    /* transform: scale(0); */
+    transform: translateX(-100%);
+    transition: .5s;
+}
+.services-photos_card:hover 
+.services-photo_card_text{
+    /* transform: scale(1); */
+    transform: translateX(0);
+}
+
+.services-photo_card_text_group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    padding-top: 50px;
+    cursor: pointer;
+}
+
+/* services end */
+
+/*---------------------------------------------media-query------------------------------- */
+
+/* nav section */
+@media(max-width:1000px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        padding: 0 20px;
+    }
+        .logo span {
+            font-size: 1.2rem;
+            font-weight: 50;
+            color: var(--third-color);
+            font-family: myfont;
+        }
+    #bars{
+        display: block;
+    }
+    .social-link{
+        display: none;
+    }
+    .nav-link{
+        /* display: none; */
+        transition: 0.5s;
+        transform: translateX(100%);
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background: orange;
+        padding: 25px 100px;
+    }
+    .show{
+        /* display: block; */
+        transform: translateX(0%);
+    }
+    .nav-link a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+/* banner */
+.banner{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-box{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+.about-us_left{
+    padding: 0;
+}
+ .about-us_text_gp{
+    padding: 30px;
+}
+.about-us_text_gp h2 {
+    text-align: center;
+}
+.shop{
+    display: flex;
+    flex-direction: column-reverse;
+}
+}
